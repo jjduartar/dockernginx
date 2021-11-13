@@ -1,14 +1,9 @@
 pipeline {
-  agent {
-    docker {
-      image 'hello-world'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
-        echo 'Ready'
+        sh 'node --version'
       }
     }
 
